@@ -1,11 +1,5 @@
 # CST8917 Assignment 1: Durable Workflow for Image Metadata Processing
 
-**Weight**: 10% of Final Grade  
-**Due Date**: Saturday, July 19, 2025, 11:59 PM  
-**Submission**: GitHub repo having all source code with proper documentation + YouTube demo (Max 5 minuites) link in `README.md`. Submit the GitHub repository URL via Brightspace.
-
-
-
 ---
 
 ## Objective
