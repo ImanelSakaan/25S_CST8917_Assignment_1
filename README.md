@@ -81,6 +81,61 @@ A fictional content moderation team wants to analyze the metadata of user-upload
 
 ---
 
+### 🚀 Updated Implementation for Azure Functions v2
+
+#### Step 1: Update `requirements.txt`
+
+```txt
+azure-functions>=1.18.0
+azure-functions-durable>=1.2.9
+Pillow==10.0.0
+pyodbc
+azure-storage-blob
+````
+
+---
+
+#### Step 2: Create `function_app.py` (Main Application File)
+
+Create a `function_app.py` file in your project root. This will contain all your function definitions using the v2 programming model.
+
+---
+
+#### Step 3: Update Project Structure
+
+With the v2 model, you no longer need individual folders for each function. Your project structure should look like this:
+
+```
+image-metadata-processor/
+├── function_app.py          # Main application file (all functions)
+├── requirements.txt         # Dependencies
+├── host.json                # Function app configuration
+├── local.settings.json      # Local environment settings
+├── .gitignore               # Git ignore file
+└── README.md                # Documentation
+```
+---
+
+### Step 4: Test Locally
+
+To run your Azure Function App locally:
+
+```bash
+# Start the function app
+func start
+````
+<img width="1253" height="679" alt="image" src="https://github.com/user-attachments/assets/a22e8eb0-b775-4674-bd5c-2441d703f21b" />
+
+
+---
+<img width="1270" height="659" alt="image" src="https://github.com/user-attachments/assets/40bcb74c-b5dd-4767-9fe3-6d04f9eca308" />
+
+
+```
+
+
+```
+
 
 
 
