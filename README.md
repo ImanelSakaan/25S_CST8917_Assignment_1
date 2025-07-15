@@ -7,7 +7,10 @@
 Build a **serverless image metadata processing pipeline** using **Azure Durable Functions** in **Python**. This assignment challenges you to use **blob triggers**, **activity functions**, and **output bindings**, and to **deploy** a complete solution to Azure. You'll simulate a real-world event-driven system.
 
 ---
+## 📸 Demo Video
 
+🎥 Watch the demo here:  
+**[▶️ YouTube Video Link](https://youtu.be/ke40vtXDjCM)**
 ## Scenario
 
 A fictional content moderation team wants to analyze the metadata of user-uploaded images. Your Durable Functions app should:
@@ -18,27 +21,60 @@ A fictional content moderation team wants to analyze the metadata of user-upload
 
 ---
 
-## Workflow Requirements
+## Workflow 
+---
 
-### Step 1: Blob Trigger (Client Function)
+### 🏗️ The 4 Function Types in Our Solution
 
-- Create a blob-triggered function that starts the orchestration.
-- The blob container (e.g., `images-input`) should accept `.jpg`, `.png`, or `.gif` images.
+---
 
-### Step 2: Orchestrator Function
+#### 1. Client Function (Blob Trigger)
 
-- The orchestrator should:
-  1. Call an activity function to extract metadata from the image.
-  2. Call a second activity function to store that metadata in Azure SQL DB via output binding.
+* **Triggers automatically** when a new image is uploaded to blob storage
+* **Validates** the file format (only `.jpg`, `.png`, `.gif` allowed)
+* **Starts** the orchestration workflow
 
-### Step 3: Activity Function – Extract Metadata
+---
 
-- Extract the following from each image:
-  - File name
-  - File size in KB
-  - Width and height (in pixels)
-  - Image format (e.g., JPEG, PNG)
+#### 2. Orchestrator Function (The Coordinator)
 
-### Step 4: Activity Function – Store Metadata
+* **Coordinates** the entire workflow
+* **Calls activities** in the right order:
 
-- Use **Azure SQL output binding** to store the image metadata.
+  1. First: Extract metadata (PIL + blob read)
+  2. Second: Store metadata in database (inserts into SQL DB)
+
+---
+
+#### 3. Activity Function #1 (Extract Metadata)
+
+* **Downloads** the image from blob storage
+* **Extracts** information:
+
+  * File name
+  * File size (in KB)
+  * Width and height (pixels)
+  * Image format (JPEG, PNG, GIF)
+
+---
+
+#### 4. Activity Function #2 (Store Data)
+
+* **Takes** the extracted metadata
+* **Saves** it to Azure SQL Database
+* **Logs** success or failure
+
+---
+
+### 🔄 Complete Workflow Flow
+
+📁 Image Upload → 🔔 Blob Trigger → 👔 Orchestrator → 🔍 Extract Metadata → 💾 Store in DB
+
+---
+
+
+
+
+
+
+
