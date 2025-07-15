@@ -130,12 +130,16 @@ func start
 ---
 <img width="1270" height="659" alt="image" src="https://github.com/user-attachments/assets/40bcb74c-b5dd-4767-9fe3-6d04f9eca308" />
 
+### Step 5: Deploy to Azure
 
-```
+Steps
+In the Explorer or Azure tab, right-click your project folder.
+Click "Deploy to Function App..."
+Choose:
+Your Azure subscription
+An existing Function App or create a new one (pick Python as the runtime and your preferred region)
 
-
-```
-
+<img width="424" height="193" alt="image" src="https://github.com/user-attachments/assets/c5d33071-7f34-4f14-a8e4-d228ebbbcd2e" />
 
 
 
