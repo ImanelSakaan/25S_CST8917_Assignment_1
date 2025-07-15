@@ -2,15 +2,24 @@
 
 ---
 
-## Objective
-
-Build a **serverless image metadata processing pipeline** using **Azure Durable Functions** in **Python**. This assignment challenges you to use **blob triggers**, **activity functions**, and **output bindings**, and to **deploy** a complete solution to Azure. You'll simulate a real-world event-driven system.
-
----
 ## 📸 Demo Video
 
 🎥 Watch the demo here:  
 **[▶️ YouTube Video Link](https://youtu.be/ke40vtXDjCM)**
+
+---
+## 🛠️ Prerequisites
+
+- ✅ Azure Subscription  
+- ✅ Python 3.8+  
+- ✅ [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)  
+- ✅ [Azure Functions Core Tools v4](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local)  
+- ✅ [Visual Studio Code](https://code.visualstudio.com/) + Azure Functions extension  
+- ✅ Azure Storage Account  
+- ✅ Azure SQL Database  
+- ✅ `ODBC Driver 17 for SQL Server` (for Ubuntu 24.04, see notes below)
+
+---
 ## Scenario
 
 A fictional content moderation team wants to analyze the metadata of user-uploaded images. Your Durable Functions app should:
